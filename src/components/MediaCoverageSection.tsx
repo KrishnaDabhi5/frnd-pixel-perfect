@@ -28,52 +28,34 @@ const MediaCoverageSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-background">
+    <section className="py-12 px-4 bg-background">
       <div className="container max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
             Media Coverages
           </h2>
-          <p className="text-lg text-muted-foreground">
-            See what the media is saying about FRND's journey and success
-          </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article, index) => (
-            <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border-0">
+            <div key={index} className="bg-white rounded-2xl shadow-lg border overflow-hidden hover:shadow-xl transition-shadow duration-300">
               {/* Article Image */}
               <div className="aspect-video overflow-hidden">
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
 
               {/* Article Content */}
-              <div className="p-6">
-                <div className="mb-2">
-                  <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full">
-                    {article.source}
-                  </span>
-                </div>
-
-                <h3 className="font-bold text-lg text-foreground mb-3 line-clamp-3 leading-tight">
+              <div className="p-4">
+                <h3 className="font-bold text-lg text-foreground mb-2 line-clamp-2 leading-tight">
                   {article.title}
                 </h3>
-
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                  {article.excerpt}
-                </p>
-
-                <Button variant="ghost" size="sm" className="p-0 h-auto text-primary hover:text-primary/80">
-                  Read more
-                  <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

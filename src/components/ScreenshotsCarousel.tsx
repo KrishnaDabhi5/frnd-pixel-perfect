@@ -20,11 +20,11 @@ const ScreenshotsCarousel = () => {
   };
 
   return (
-    <section className="py-12 px-4 bg-background">
+    <section className="py-6 px-4 bg-background">
       <div className="container max-w-6xl mx-auto">
         <div className="relative">
           {/* Carousel Container */}
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -34,15 +34,9 @@ const ScreenshotsCarousel = () => {
                   <img
                     src={screenshot}
                     alt={`App Screenshot ${index + 1}`}
-                    className="w-full h-auto max-h-[400px] md:max-h-[500px] object-cover"
+                    className="w-full h-auto max-h-[300px] md:max-h-[400px] object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button variant="secondary" size="sm" className="bg-white/90 hover:bg-white text-black">
-                      <Expand className="w-4 h-4 mr-2" />
-                      View Full
-                    </Button>
-                  </div>
                 </div>
               ))}
             </div>
@@ -54,7 +48,6 @@ const ScreenshotsCarousel = () => {
             size="sm"
             onClick={prevSlide}
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-0 shadow-lg"
-            disabled={currentIndex === 0}
           >
             <ChevronLeft className="w-4 h-4" />
           </Button>
@@ -64,13 +57,12 @@ const ScreenshotsCarousel = () => {
             size="sm"
             onClick={nextSlide}
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-0 shadow-lg"
-            disabled={currentIndex === screenshots.length - 1}
           >
             <ChevronRight className="w-4 h-4" />
           </Button>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4">
             {screenshots.map((_, index) => (
               <button
                 key={index}

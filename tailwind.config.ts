@@ -62,9 +62,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'app-pink': 'hsl(var(--app-pink))',
-				'app-pink-light': 'hsl(var(--app-pink-light))',
-				'app-pink-dark': 'hsl(var(--app-pink-dark))',
+				'app-red': 'hsl(var(--app-red))',
+				'app-red-light': 'hsl(var(--app-red-light))',
+				'app-green': 'hsl(var(--app-green))',
 				'app-gray': 'hsl(var(--app-gray))',
 				'app-text': 'hsl(var(--app-text))',
 				'app-text-muted': 'hsl(var(--app-text-muted))'

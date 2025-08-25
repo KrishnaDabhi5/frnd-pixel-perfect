@@ -4,9 +4,9 @@ import { Card } from "@/components/ui/card";
 
 const AppStoreSection = () => {
   return (
-    <section className="py-12 px-4 bg-gradient-to-br from-app-pink-light via-background to-app-gray">
+    <section className="py-8 px-4 bg-background">
       <div className="container max-w-4xl mx-auto">
-        <Card className="p-6 md:p-8 shadow-xl border-0 bg-card/80 backdrop-blur-sm">
+        <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border">
           <div className="flex flex-col md:flex-row items-center gap-6">
             {/* App Icon */}
             <div className="flex-shrink-0">
@@ -63,7 +63,7 @@ const AppStoreSection = () => {
               </Button>
             </div>
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );

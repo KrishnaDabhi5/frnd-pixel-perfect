@@ -23,36 +23,23 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-app-gray border-t">
-      <div className="container max-w-6xl mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-muted border-t">
+      <div className="container max-w-6xl mx-auto px-4 py-8">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">F</span>
+              <div className="h-8 w-8 rounded-full bg-app-red flex items-center justify-center">
+                <span className="text-white font-bold text-sm">F</span>
               </div>
               <span className="font-bold text-xl">FRND</span>
-            </div>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              The leading audio-first social networking platform for meaningful connections and friendships.
-            </p>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4 mb-6">
-              <Button variant="outline" size="sm" className="p-2">
-                <Instagram className="w-4 h-4" />
-              </Button>
-              <Button variant="outline" size="sm" className="p-2">
-                <Linkedin className="w-4 h-4" />
-              </Button>
             </div>
           </div>
 
           {/* Footer Links */}
           {footerLinks.map((section, index) => (
             <div key={index}>
-              <h3 className="font-semibold text-foreground mb-4">{section.title}</h3>
+              <h3 className="font-semibold text-foreground mb-3">{section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
@@ -69,12 +56,12 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="border-t pt-8 mt-8">
+        <div className="border-t pt-6 mt-6">
           <div className="grid gap-6 md:grid-cols-2">
             {/* Contact Info */}
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Contact Us</h3>
-              <div className="space-y-3 text-sm">
+              <h3 className="font-semibold text-foreground mb-3">Contact Us</h3>
+              <div className="space-y-2 text-sm">
                 <div className="flex items-center space-x-2 text-muted-foreground">
                   <Mail className="w-4 h-4" />
                   <a href="mailto:careers@frnd.app" className="hover:text-foreground transition-colors">
@@ -83,7 +70,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-start space-x-2 text-muted-foreground">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <div>
+                  <div className="text-xs">
                     <p>Urban Vault No. 1350,</p>
                     <p>19th Main, 17th Cross Road,</p>
                     <p>HSR Layout 1st sector opposite,</p>
@@ -94,10 +81,10 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* HR Contact */}
+            {/* HR Contact & Social */}
             <div>
-              <h3 className="font-semibold text-foreground mb-4">HR Contact</h3>
-              <div className="text-sm text-muted-foreground">
+              <h3 className="font-semibold text-foreground mb-3">HR Contact</h3>
+              <div className="text-sm text-muted-foreground mb-4">
                 <a 
                   href="https://www.linkedin.com/in/tanisha-g-897477167/"
                   target="_blank"
@@ -107,13 +94,16 @@ const Footer = () => {
                   HR - Tanisha Gagneja
                 </a>
               </div>
+              
+              <div className="flex space-x-3">
+                <Button variant="outline" size="sm" className="p-2">
+                  <Instagram className="w-4 h-4" />
+                </Button>
+                <Button variant="outline" size="sm" className="p-2">
+                  <Linkedin className="w-4 h-4" />
+                </Button>
+              </div>
             </div>
-          </div>
-
-          <div className="text-center pt-6 border-t mt-6">
-            <p className="text-sm text-muted-foreground">
-              © 2024 FRND App. All rights reserved.
-            </p>
           </div>
         </div>
       </div>

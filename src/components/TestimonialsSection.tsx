@@ -24,30 +24,27 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-background">
+    <section className="py-12 px-4 bg-background">
       <div className="container max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
             Our users love us
           </h2>
-          <p className="text-lg text-muted-foreground">
-            See what our community has to say about their FRND experience
-          </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-0 bg-card/50 backdrop-blur-sm">
+            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border">
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
 
               {/* Content */}
-              <p className="text-muted-foreground mb-6 leading-relaxed italic">
-                "{testimonial.content}"
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                {testimonial.content}
               </p>
 
               {/* User Info */}
@@ -55,14 +52,13 @@ const TestimonialsSection = () => {
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
+                  className="w-10 h-10 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                  <p className="text-sm text-muted-foreground">FRND User</p>
+                  <h4 className="font-semibold text-foreground text-sm">{testimonial.name}</h4>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

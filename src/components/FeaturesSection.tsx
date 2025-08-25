@@ -8,54 +8,38 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: videoCallIcon,
-      title: "Sexy Video Calls in 2.00₹",
-      description: "Connect with people through affordable video calls starting at just ₹2"
+      title: "Sexy Video Calls in 2.00₹"
     },
     {
       icon: friendshipIcon,
-      title: "FRND-ship via Matchmaker on Audio Streaming",
-      description: "Find meaningful connections through our intelligent audio-based matchmaking system"
+      title: "FRND-ship via Matchmaker on Audio Streaming"
     },
     {
       icon: giftingIcon,
-      title: "Virtual Gifting driven Monetisation",
-      description: "Express yourself and support creators through our virtual gifting platform"
+      title: "Virtual Gifting driven Monetisation"
     },
     {
       icon: moderationIcon,
-      title: "Moderated / Non-sleazy Community",
-      description: "Enjoy a safe, respectful community with active moderation and community guidelines"
+      title: "Moderated / Non-sleazy Community"
     },
     {
       icon: aiAvatarIcon,
-      title: "No pictures Only AI avatars",
-      description: "Maintain privacy while connecting through AI-generated avatars instead of real photos"
+      title: "No pictures Only AI avatars"
     }
   ];
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-background via-app-gray to-app-pink-light">
-      <div className="container max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Choose FRND?
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover amazing features that make FRND the perfect platform for meaningful connections
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:gap-6 lg:gap-8">
+    <section className="py-12 px-4 bg-background">
+      <div className="container max-w-4xl mx-auto">
+        <div className="space-y-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col md:flex-row items-center gap-6 p-6 md:p-8 rounded-2xl bg-card shadow-lg hover:shadow-xl transition-all duration-300 ${
-                index % 2 === 1 ? "md:flex-row-reverse" : ""
-              }`}
+              className="flex items-center gap-4 p-4"
             >
               {/* Icon */}
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-primary/10 p-4 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 p-2 flex items-center justify-center">
                   <img
                     src={feature.icon}
                     alt={feature.title}
@@ -65,16 +49,23 @@ const FeaturesSection = () => {
               </div>
 
               {/* Content */}
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+              <div className="flex-1">
+                <h3 className="text-lg font-bold text-foreground mb-1">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Feature Image */}
+        <div className="mt-12 text-center">
+          <img
+            src="https://melodious-sawine-2b391d.netlify.app/frnd.app/index.htmlstatic/media/features.c55f6918.png"
+            alt="App Features"
+            className="mx-auto max-w-full h-auto"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

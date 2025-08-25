@@ -20,10 +20,10 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between px-4 max-w-7xl">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">F</span>
+          <div className="h-8 w-8 rounded-full bg-app-red flex items-center justify-center">
+            <span className="text-white font-bold text-sm">F</span>
           </div>
-          <span className="font-bold text-lg hidden sm:inline">FRND</span>
+          <span className="font-bold text-lg hidden sm:inline text-foreground">FRND</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -46,7 +46,7 @@ const Header = () => {
             <span>Language</span>
           </Button>
           
-          <Button variant="default" size="sm" className="hidden sm:inline-flex">
+          <Button variant="default" size="sm" className="hidden sm:inline-flex bg-app-green hover:bg-app-green/90 text-white">
             Login
           </Button>
 
@@ -75,7 +75,7 @@ const Header = () => {
                     <Globe className="h-4 w-4 mr-2" />
                     Language
                   </Button>
-                  <Button variant="default" size="sm" className="w-full">
+                  <Button variant="default" size="sm" className="w-full bg-app-green hover:bg-app-green/90 text-white">
                     Login
                   </Button>
                 </div>
